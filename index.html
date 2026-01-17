@@ -396,9 +396,9 @@
             const inc = amounts.filter(i => i > 0).reduce((acc, i) => acc += i, 0);
             const exp = amounts.filter(i => i < 0).reduce((acc, i) => acc += i, 0) * -1;
 
-            balance.innerText = `$${total.toFixed(2)}`;
-            money_plus.innerText = `+$${inc.toFixed(2)}`;
-            money_minus.innerText = `-$${exp.toFixed(2)}`;
+            balance.innerText = `₹${total.toFixed(2)}`;
+            money_plus.innerText = `+₹${inc.toFixed(2)}`;
+            money_minus.innerText = `-₹${exp.toFixed(2)}`;
 
             const pct = Math.min((exp / userProfile.monthlyLimit) * 100, 100);
             progressBar.style.width = `${pct}%`;
@@ -445,4 +445,5 @@
         loadData();
     </script>
 </body>
+
 </html>
